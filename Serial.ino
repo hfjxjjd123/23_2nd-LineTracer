@@ -15,7 +15,7 @@ void setup() {
 }
 
 void loop() {
-  // DataToRead = 'L100R020\n';
+  // DataToRead Format == 'L100R020\n';
   DataToRead[8] = '\n';
   Serial.readBytesUntil(char(13), DataToRead, 8);
   
