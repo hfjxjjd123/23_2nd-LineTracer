@@ -1,10 +1,10 @@
-import sys
-sys.path.append('/usr/lib/python3/dist-packages')
 import serial
 
-def main():
-    cmd_arduino(20,20)
-    print('d')
+# /dev/tty/serial{NUM} 먼저 확인하기
+# for not lib not defined
+# import sys
+# sys.path.append('/usr/lib/python3/dist-packages')
+# import serial
 
 def cmd_arduino(left, right):
     ser = serial.Serial('/dev/serial/by-id/usb-Arduino__www.arduino.cc__0043_5573631303835101F150-if00',9600)
@@ -15,5 +15,3 @@ def cmd_arduino(left, right):
     
     read_serial=ser.readline()
     print(read_serial)
-
-main()
